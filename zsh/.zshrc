@@ -54,3 +54,9 @@ source ~/dotfiles/zsh/external/bd.zsh
 
 # Source our own scripts
 source ~/dotfiles/zsh/scripts.sh
+
+# FZF utility
+if [ $(command -v "fzf") ]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi
