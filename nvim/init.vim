@@ -1,33 +1,29 @@
-" NEOVIM CONFIG FOR JBNUNEZ
-" =========================
-
-" Make the clipboard universal to the OS
 set clipboard+=unnamedplus
 
-" Unmap the arrow keys.
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-" Disable the swap file option
+" no swap file
 set noswapfile
 
-" Enable an undo tree for every file
+" save undo-trees in files
 set undofile
 set undodir=$HOME/.config/nvim/undo
+
+" number of undo saved
 set undolevels=10000
 set undoreload=10000
 
-" Enable line numbers
+" set line number
 set number
 
-" Define sensible auto-indent behavior
+
+" use 4 spaces instead of tab
+" copy indent from current line when starting a new line
 set autoindent
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-" Allow for closing modified buffers that are hidden
-set hidden
