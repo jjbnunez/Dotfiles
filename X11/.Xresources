@@ -1,6 +1,6 @@
 *.foreground: #C6C6C6
 *.background: #1C1C1C
-*.cursorcolor: $444444
+*.cursorColor: #444444
 
 ! black 236 238
 *.color0: #303030
@@ -15,28 +15,26 @@
 *.color10: #87AF87
 
 ! yellow 221
-*.color3: #FFD75F
-*.color11: #FFD75F
+*.color3: #ffd75f
+*.color11: #ffd75f
 
 ! blue 110
-*.color4: #87AFD7
-*.color12: #87AFD7
+*.color4: #87afd7
+*.color12: #87afd7
 
 ! magenta 146
-*.color5: #AFAFD7
-*.color13: #AFAFD7
+*.color5: #afafd7
+*.color13: #afafd7
 
 ! cyan 75
-*.color6: #AFD7FF
-*.color14: #AFD7FF
+*.color6: #afd7ff
+*.color14: #afd7ff
 
 ! white 239 15
-*.color7: #E4E4E4
-*.color15: #FFFFFF
+*.color7: #e4e4e4
+*.color15: #ffffff
 
-URxvt*font: xft:Inconsolata Nerd Font Mono:style=Medium:size=14:pixelsize=16:antialias=true
-
-URxvt*letterSpace: -5
+URxvt*font: xft:Inconsolata Nerd Font Mono:style=Medium:size=14:pixelsize=24:antialias=true
 
 URxvt*borderLess: false
 URxvt*externalBorder: 0
@@ -48,12 +46,9 @@ URxvt*saveLines: 5000
 
 URxvt*perl-ext-common: default,tabbedex
 
-URxvt*iso14755: false
-URxvt*iso14755_52: false
-
-URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab
-URxvt.keysym.Control-Shift-K: perl:tabbedex:next_tab
-URxvt.keysym.Control-Shift-J: perl:tabbedex:prev_tab
+URxvt*keysym.Control-Shift-N: perl:tabbedex:new_tab
+URxvt*keysym.Control-Shift-K: perl:tabbedex:next_tab
+URxvt*keysym.Control-Shift-J: perl:tabbedex:prev_tab
 
 URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_left
@@ -64,5 +59,8 @@ URxvt*tabbedex.tabbar-bg: 236
 URxvt*tabbedex.tab-fg: 110
 URxvt*tabbedex.tab-bg: 236
 
-URxvt*tabbedex.transparent:true
-URxvt*tabbedex.new-button:false
+URxvt*tabbedex.transparent: true
+URxvt*tabbedex.new-button: false
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
