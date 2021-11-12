@@ -58,7 +58,7 @@ fi
 
 # Auto start i3
 if [ "$(tty)" = "/dev/tty1" ]; then
-    pgrep i3 || exec startx "XDG_CONFIG_HOME/X11/.xinitrc"
+    pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
 
 # Source the syntax highlighting plugin
