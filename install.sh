@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install neovim plugin manager
-[ ! -f "$DOTFILES/nvim/autoload/plug,vim" ] \
+[ ! -f "$DOTFILES/nvim/autoload/plug.vim" ] \
     && curl -fLo "$DOTFILES/nvim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -56,3 +56,9 @@ cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME"
 # git #
 #######
 ln -sf "$DOTFILES/git/.gitconfig" "$HOME"
+
+########
+# tmux #
+########
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
