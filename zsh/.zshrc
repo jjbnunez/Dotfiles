@@ -58,8 +58,19 @@ fi
 
 # Auto start i3
 if [ "$(tty)" = "/dev/tty1" ]; then
-    pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+   pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
+
+# Source the scripts shell file
+source $DOTFILES/zsh/scripts.sh
+
+# Run custom ftmuxp script
+ftmuxp
+
+# new keybind for cleaning our shell
+bindkey -r '^l'
+bindkey -r '^g'
+bindkey -s '^g' 'clear\n'
 
 # Source the syntax highlighting plugin
 # SOURCE THIS AT THE BOTTOM OF THE FILE

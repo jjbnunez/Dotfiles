@@ -6,6 +6,7 @@ call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'simnalamburt/vim-mundo'
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " special csv file config
@@ -59,3 +60,6 @@ nnoremap <leader>bd :Bdelete<cr> ;delete buffer
 
 " special remap for simeji/winresizer window resizer plugin
 let g:winresizer_start_key = "<leader>w"
+
+" special remap for standardizing split window keybind with tmux
+nnoremap <c-w>h <c-w>s

@@ -61,4 +61,9 @@ ln -sf "$DOTFILES/git/.gitconfig" "$HOME"
 # tmux #
 ########
 mkdir -p "$XDG_CONFIG_HOME/tmux"
+mkdir -p "$XDG_CONFIG_HOME/tmuxp"
 ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+ln -sf "$DOTFILES/tmuxp/dotfiles.yml" "$XDG_CONFIG_HOME/tmuxp/dotfiles.yml"
+[ ! -d "$XDG_CONFIG_HOME/tmux/plugins/tpm" ] \
+    && git clone https://github.com/tmux-plugins/tpm \
+    "$XDG_CONFIG_HOME/tmux/plugins/tpm"
