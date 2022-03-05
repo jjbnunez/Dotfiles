@@ -1,3 +1,6 @@
+#xrandr --setprovideroutputsource modesetting NVIDIA-0
+#xrandr --auto
+#xrandr --dpi 96
 xrdb -merge ~/.config/X11/.Xresources
 urxvtd -o -q -f
 udiskie &
