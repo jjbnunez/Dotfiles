@@ -53,6 +53,7 @@ set hidden
 nnoremap <space> <nop>
 let mapleader = "\<space>"
 nnoremap <leader>bn :bn<cr> ;buffer next
+nnoremap <leader>bp :bp<cr> ;buffer previous
 nnoremap <leader>tn gt ;new tab
 
 " special remap for moll/vim-bbye buffer delete plugin
