@@ -1,3 +1,6 @@
+# For local bin
+export PATH="$HOME/.local/bin:$PATH"
+
 # For dotfiles
 export XDG_CONFIG_HOME="$HOME/.config"
 
