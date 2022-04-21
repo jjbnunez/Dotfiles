@@ -7,6 +7,7 @@ call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
     Plug 'junegunn/fzf.vim'
     Plug 'simnalamburt/vim-mundo'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " special csv file config
@@ -29,7 +30,7 @@ set noswapfile
 
 " save undo-trees in files
 set undofile
-set undodir=$HOME/.config/nvim/undo
+set undodir=$XDG_CONFIG_HOME/nvim/undo
 
 " number of undo saved
 set undolevels=10000
@@ -58,6 +59,9 @@ nnoremap <leader>tn gt ;new tab
 
 " special remap for moll/vim-bbye buffer delete plugin
 nnoremap <leader>bd :Bdelete<cr> ;delete buffer
+
+" special remap for invoking fzf
+nnoremap <leader>t :FZF<cr> ;invoke fzf
 
 " special remap for simeji/winresizer window resizer plugin
 let g:winresizer_start_key = "<leader>w"
