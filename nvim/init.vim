@@ -52,15 +52,22 @@ set hidden
 " set the spacebar as a leader for normal mode
 nnoremap <space> <nop>
 let mapleader = "\<space>"
-nnoremap <leader>bn :bn<cr> ;buffer next
-nnoremap <leader>bp :bp<cr> ;buffer previous
-nnoremap <leader>tn gt ;new tab
+
+" buffer next and buffer previous
+nnoremap <leader>bn :bn<cr>
+nnoremap <leader>bp :bp<cr>
 
 " special remap for moll/vim-bbye buffer delete plugin
 nnoremap <leader>bd :Bdelete<cr> ;delete buffer
+
+" create new tab
+nnoremap <leader>tn gt
 
 " special remap for simeji/winresizer window resizer plugin
 let g:winresizer_start_key = "<leader>w"
 
 " special remap for standardizing split window keybind with tmux
 nnoremap <c-w>h <c-w>s
+
+" special remap like vscode for fuzzy file search
+nnoremap <leader>p :FZF<cr>
