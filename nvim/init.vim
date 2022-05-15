@@ -61,7 +61,7 @@ nnoremap <leader>tn gt ;new tab
 nnoremap <leader>bd :Bdelete<cr> ;delete buffer
 
 " special remap for invoking fzf
-nnoremap <leader>t :FZF<cr> ;invoke fzf
+nnoremap <leader>p :FZF<cr>
 
 " special remap for simeji/winresizer window resizer plugin
 let g:winresizer_start_key = "<leader>w"
