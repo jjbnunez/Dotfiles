@@ -33,19 +33,22 @@ try {
 
     $scoopIsInstalled = ($null -ne (Get-Command scoop -ErrorAction Ignore))
     if (-not $scoopIsInstalled) {
-        # scoop install
+        # install scoop
         Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
         
-        # git
+        # 7zip and git (NEEDED FOR BUCKET MANAGEMENT)
+	scoop install 7zip
         scoop install git
         git config --system --unset credential.helper
         
+	# add extras bucket
+	scoop bucket add extras
+
         # oh-my-posh
         scoop install oh-my-posh
         
         # python
         scoop install python
-        pip install --upgrade pip
 
         # nodejs (& yarn)
         scoop install nodejs-lts
@@ -57,6 +60,9 @@ try {
         pip install --user pynvim
         npm install --global neovim
 
+	# vscode
+	scoop install vscode
+
         # scoop updates
         scoop update
         scoop update *
@@ -65,15 +71,7 @@ try {
 
         # scoop updates
         scoop update
-        scoop update *
-
-        # python pip update
-        pip install --upgrade pip
-
-        # neovim providers
-        pip install --upgrade pynvim
-
-        
+        scoop update *        
     }
 
 
@@ -114,5 +112,6 @@ try {
 }
 
 catch {
-    Write-Error $_
+    Write-Host $_.Exception.Message -Foreground "Red"
+    Write-Host $_.ScriptStackTrace -Foreground "DarkGray"
 }
