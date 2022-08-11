@@ -27,7 +27,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 # Define an env var for our dotfiles directory
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/Dotfiles"
 
 # Modify fzf behavior to use ripgrep instead of grep
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
