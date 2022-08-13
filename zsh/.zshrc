@@ -10,7 +10,7 @@ autoload -Uz compinit; compinit
 
 # Autocomplete hidden files
 _comp_options+=(globdots)
-source ~/dotfiles/zsh/external/completion.zsh
+source ~/Dotfiles/zsh/external/completion.zsh
 
 # Enable ability to autoload everything in the 'external' directory
 #   By prepending the external path to the current $fpath variable,
@@ -48,7 +48,7 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 # Source our directory-jumper script
-source ~/dotfiles/zsh/external/bd.zsh
+source ~/Dotfiles/zsh/external/bd.zsh
 
 # Source the fuzzy finder
 if [ $(command -v "fzf") ]; then
