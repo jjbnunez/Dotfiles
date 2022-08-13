@@ -1,5 +1,5 @@
 session_name: cheatsheets
-start_directory: $HOME/dotfiles/cheatsheets
+start_directory: $HOME/Dotfiles/cheatsheets
 
 windows:
   - window_name: i3 
