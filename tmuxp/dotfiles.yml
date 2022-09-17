@@ -9,6 +9,6 @@ windows:
   - window_name: terms
     layout: tiled
     panes:
-      -
-      - ls -lah
+      - shell_command: git status
+      - shell_command: ls -lah
       -
