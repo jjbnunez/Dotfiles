@@ -64,9 +64,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+q kill
 
 # DEFINE WORKSPACE NAMES
-set $ws1 "1 WEB"
-set $ws2 "2 WORK"
-set $ws3 "3"
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
