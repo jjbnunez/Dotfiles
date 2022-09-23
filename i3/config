@@ -218,6 +218,7 @@ workspace_auto_back_and_forth yes
 
 # Assign Firefox to open in the "web" workspace.
 assign [class="firefox" instance="Navigator"] $ws1
+assign [class="KeePassXC" instance="keepassxc"] $ws3
 
 # Assign Arandr as a floating window as well.
 for_window [class="Arandr"] floating enable
