@@ -7,7 +7,7 @@ windows:
     panes:
       - nvim +FZF
   - window_name: terms
-    layout: tiled
+    layout: main-vertical
     panes:
       - shell_command: git status
       - shell_command: ls -lah
