@@ -11,14 +11,10 @@
  ##
 
 try {
-    
-    . .\install_envvars.ps1
-
-    . .\install_scoop.ps1
-
-    . .\install_psprofile.ps1
-
-    . .\install_nvimconf.ps1  
+    . .\envvars\install.ps1
+    . .\scoop\install.ps1
+    . .\powershell\install.ps1
+    . .\nvim\install.ps1  
 
     Write-Host "Done!"
     Write-Warning "Restart your Windows Terminal process for changes to take full effect!"

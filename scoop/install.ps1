@@ -8,18 +8,15 @@ if (-not $isScoopInstalled) {
     Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
     
     # 7zip and git (NEEDED FOR BUCKET MANAGEMENT)
-	scoop install 7zip
+    scoop install 7zip
     scoop install git
     git config --system --unset credential.helper
-    
-	# add extras bucket
-	scoop bucket rm main
-	scoop bucket add main
-	scoop bucket add extras
 
-    # oh-my-posh
-    scoop install oh-my-posh
-    
+    # add and fix buckets
+    scoop bucket rm main
+    scoop bucket add main
+    scoop bucket add extras
+
     # python
     scoop install python
 
@@ -33,8 +30,8 @@ if (-not $isScoopInstalled) {
     pip install --user pynvim
     npm install --global neovim
 
-	# vscode
-	scoop install vscode
+    # vscode
+    scoop install vscode
 
     # scoop updates
     scoop update
