@@ -3,16 +3,19 @@
 ##############
 
 $isScoopInstalled = ($null -ne (Get-Command scoop -ErrorAction Ignore))
+$isOhMyPoshInstalled = ($null -ne (Get-Command oh-my-posh -ErrorAction Ignore))
 
-Write-Host "Installing Oh My Posh..." -NoNewLine
 if (-not $isScoopInstalled) {
     Write-Error "ABORT! scoop not found among commands. Is scoop installed?"
 } else {
-    scoop install oh-my-posh
-    Write-Host "OK"
+    if (-not $isOhMyPoshInstalled) {
+        scoop install oh-my-posh
+    } else {
+        scoop update oh-my-posh
+    }
 }
 
-Write-Host "Updating PowerShell profile..." -NoNewLine
+Write-Host "Updating PowerShell profile... " -NoNewLine
 $profileSource = "$env:DOTFILES\powershell\profile.ps1"
 $profileTarget = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
