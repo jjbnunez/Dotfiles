@@ -4,7 +4,6 @@
  #
  # This script uninstalls and cleans up the changes
  # that my dotfile installer script makes.
- #
  ##
 
 try {
