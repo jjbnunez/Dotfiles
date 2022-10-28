@@ -1,3 +1,7 @@
+URxvt.font: xft:MesloLGM Nerd Font Mono:size=12
+
+URxvt.scrollBar: false
+
 *.foreground: #C6C6C6
 *.background: #1C1C1C
 *.cursorColor: #444444
@@ -34,24 +38,24 @@
 *.color7: #e4e4e4
 *.color15: #ffffff
 
-URxvt*font: xft:MesloLGM Nerd Font Mono:size=12
-
+! border settings
 URxvt*borderLess: false
 URxvt*externalBorder: 0
 URxvt*internalBorder: 4
 
-URxvt*scrollBar: false
-
+! line history
 URxvt*saveLines: 5000
 
-URxvt*perl-ext-common: default,tabbedex
+! extensions enabled
+URxvt.perl-ext-common: default,tabbedex,matcher,selection-to-clipboard,resize-font 
+
+! tabbedex settings
 URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab
 URxvt.keysym.Control-Shift-K: perl:tabbedex:next_tab
 URxvt.keysym.Control-Shift-J: perl:tabbedex:prev_tab
 URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
 URxvt.keysym.Control-Shift-H: perl:tabbedex:move_tab_left
 URxvt.keysym.Control-Shift-L: perl:tabbedex:move_tab_right
-
 URxvt*tabbedex.tabbar-fg: 15
 URxvt*tabbedex.tabbar-bg: 236
 URxvt*tabbedex.tab-fg: 110
@@ -59,6 +63,17 @@ URxvt*tabbedex.tab-bg: 236
 URxvt*tabbedex.transparent: true
 URxvt*tabbedex.new-button: false
 
+! selection-to-clipboard settings
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+! matcher settings
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+
+! fix Ctrl+Shift keybindings
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
@@ -66,3 +81,5 @@ URxvt*inheritPixmap: true
 URxvt*transparent: true
 ! URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
 URxvt*shading: 15
+
+URxvt*termName: rxvt
