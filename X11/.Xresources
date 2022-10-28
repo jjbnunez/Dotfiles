@@ -1,4 +1,4 @@
-URxvt.font: xft:MesloLGM Nerd Font Mono:size=12
+URxvt.font: xft:MesloLGM Nerd Font Mono:size=10
 
 URxvt.scrollBar: false
 
