@@ -47,7 +47,7 @@ URxvt*internalBorder: 4
 URxvt*saveLines: 5000
 
 ! extensions enabled
-URxvt.perl-ext-common: default,tabbedex,matcher,selection-to-clipboard,resize-font 
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,resize-font 
 
 ! tabbedex settings
 URxvt.keysym.Control-Shift-N: perl:tabbedex:new_tab
