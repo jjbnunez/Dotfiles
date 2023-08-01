@@ -11,7 +11,7 @@ if (-not $isScoopInstalled) {
 # 7zip and git (NEEDED FOR BUCKET MANAGEMENT)
 scoop install 7zip
 scoop install git
-git config --system --unset credential.helper
+git config --global credential.helper manager-core
 
 # add extras bucket
 scoop bucket add extras
