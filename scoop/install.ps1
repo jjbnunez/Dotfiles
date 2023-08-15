@@ -23,6 +23,9 @@ scoop install python
 scoop install nodejs-lts
 npm install --global yarn
 
+# flutter
+scoop install flutter
+
 # scoop updates
 scoop update
 scoop update *
