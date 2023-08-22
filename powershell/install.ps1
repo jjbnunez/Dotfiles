@@ -7,15 +7,18 @@ $isOhMyPoshInstalled = ($null -ne (Get-Command oh-my-posh -ErrorAction Ignore))
 
 if (-not $isScoopInstalled) {
     Write-Error "ABORT! scoop not found among commands. Is scoop installed?"
-} else {
+}
+else {
     if (-not $isOhMyPoshInstalled) {
         scoop install oh-my-posh
-    } else {
+    }
+    else {
         scoop update oh-my-posh
     }
 }
 
 Write-Host "Updating PowerShell profile... " -NoNewLine
+
 $profileSource = "$env:DOTFILES\powershell\profile.ps1"
 $profileTarget51 = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 $profileTargetVSCode51 = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1"
@@ -31,4 +34,5 @@ Copy-Item -Path "$profileSource" -Destination "$profileTarget51" -Force
 Copy-Item -Path "$profileSource" -Destination "$profileTarget7" -Force
 Copy-Item -Path "$profileSource" -Destination "$profileTargetVSCode51" -Force
 Copy-Item -Path "$profileSource" -Destination "$profileTargetVSCode7" -Force
+
 Write-Host "OK"
