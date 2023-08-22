@@ -8,6 +8,9 @@
 
 try {
     . .\envvars\uninstall.ps1
+    #. .\scoop\uninstall.ps1
+    . .\powershell\install.ps1
+    #. .\nvim\install.ps1
 
     #########
     # scoop #
@@ -24,19 +27,7 @@ try {
         scoop uninstall scoop
     }
 
-    
-    ##############
-    # powershell #
-    ##############
-
-    Write-Host "Removing PowerShell profile..." -NoNewLine
-    $profileTarget = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
-    if (Test-Path $profileTarget) {
-        New-Item -Force -ItemType File -Path "$profileTarget" | Out-Null
-    }
-    Write-Host "OK"
-    
-    
+ 
     ########
     # nvim #
     ########
