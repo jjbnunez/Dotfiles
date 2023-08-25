@@ -13,8 +13,9 @@ scoop install 7zip
 scoop install git
 git config --global credential.helper manager-core
 
-# add extras bucket
+# add buckets 
 scoop bucket add extras
+scoop bucket add java
 
 # python
 scoop install python
@@ -25,6 +26,10 @@ npm install --global yarn
 
 # flutter
 scoop install flutter
+
+# java and kotlin
+scoop install openjdk
+scoop install kotlin
 
 # scoop updates
 scoop update
