@@ -13,3 +13,4 @@ xinput --set-prop "DLLC6AE:00 06CB:75BF Touchpad" "libinput Natural Scrolling En
 xinput --set-prop "DLLC6AE:00 06CB:75BF Touchpad" "libinput Click Method Enabled" "0, 1"
 
 exec i3
+#exec startlxqt
