@@ -4,16 +4,16 @@
     "actions": 
     [
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
             "command": 
             {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
         },
         {
             "command": "find",
@@ -34,21 +34,22 @@
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "profiles": 
     {
-        "defaults": 
-        {
+        "defaults": {
             "font": 
             {
-                "face": "MesloLGM NF"
+                "face": "MesloLGM Nerd Font"
             }
         },
         "list": 
         [
             {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
@@ -108,29 +109,6 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
-        },
-        {
-            "background": "#1D1F21",
-            "black": "#1D1F21",
-            "blue": "#3971ED",
-            "brightBlack": "#969896",
-            "brightBlue": "#3971ED",
-            "brightCyan": "#3971ED",
-            "brightGreen": "#198844",
-            "brightPurple": "#A36AC7",
-            "brightRed": "#CC342B",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#FBA922",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3971ED",
-            "foreground": "#C5C8C6",
-            "green": "#198844",
-            "name": "Google Dark",
-            "purple": "#A36AC7",
-            "red": "#CC342B",
-            "selectionBackground": "#FFFFFF",
-            "white": "#C5C8C6",
-            "yellow": "#FBA922"
         },
         {
             "background": "#282C34",
