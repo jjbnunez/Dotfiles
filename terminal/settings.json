@@ -46,7 +46,7 @@
             {
                 "face": "MesloLGM Nerd Font"
             },
-            "useAtlasEngine": false
+            "useAtlasEngine": true
         },
         "list": 
         [
