@@ -1,10 +1,10 @@
 ##
- # JJ's dotfile uninstaller script
- # ===============================
- #
- # This script uninstalls and cleans up the changes
- # that my dotfile installer script makes.
- ##
+# JJ's dotfile uninstaller script
+# ===============================
+#
+# This script uninstalls and cleans up the changes
+# that my dotfile installer script makes.
+##
 
 try {
     . .\envvars\uninstall.ps1
@@ -51,5 +51,5 @@ try {
 }
 
 catch {
-   Write-Error $_ 
+    Write-Error $_ 
 }

@@ -7,13 +7,15 @@ $isNvimInstalled = ($null -ne (Get-Command nvim -ErrorAction Ignore))
 
 if (-not $isScoopInstalled) {
     Write-Error "ABORT! scoop not found among commands. Is scoop installed?"
-} else {
+}
+else {
     if (-not $isNvimInstalled) {
         scoop install neovim
         pip install --user wheel
         pip install --user pynvim
         npm install --global neovim
-    } else {
+    }
+    else {
         scoop update neovim
     }
 }

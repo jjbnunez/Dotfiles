@@ -2,7 +2,7 @@
 # env vars #
 ############
 
-Write-Host "Updating env vars... " -NoNewLine
+Write-Host "Updating env vars..." -NoNewLine
 
 # Set the environment variables
 [Environment]::SetEnvironmentVariable("DOTFILES", "$env:USERPROFILE\Dotfiles", "User")
