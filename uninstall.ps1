@@ -10,25 +10,7 @@ try {
     . .\envvars\uninstall.ps1
     . .\scoop\uninstall.ps1
     . .\powershell\install.ps1
-    #. .\nvim\install.ps1
-
-    ########
-    # nvim #
-    ########
-
-    Write-Host "Removing nvim config and plugin manager..." -NoNewLine
-    if (Test-Path "$env:LOCALAPPDATA\nvim") {
-        Remove-Item -Recurse -Force -Path "$env:LOCALAPPDATA\nvim"
-    }
-    if (Test-Path "$env:LOCALAPPDATA\nvim-data") {
-        Remove-Item -Recurse -Force -Path "$env:LOCALAPPDATA\nvim-data"
-    }
-    Write-Host "OK"
-
-
-    #########
-    # FINAL #
-    #########
+    . .\nvim\install.ps1
 
     Write-Host "Done!"
     Write-Warning "Restart your Windows Terminal process for changes to take full effect!"
