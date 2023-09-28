@@ -17,5 +17,6 @@ try {
 }
 
 catch {
-    Write-Error $_ 
+    Write-Host $_.Exception.Message -Foreground "Red"
+    Write-Host $_.ScriptStackTrace -Foreground "DarkGray"
 }
