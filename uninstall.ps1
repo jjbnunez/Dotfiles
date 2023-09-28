@@ -8,26 +8,10 @@
 
 try {
     . .\envvars\uninstall.ps1
-    #. .\scoop\uninstall.ps1
+    . .\scoop\uninstall.ps1
     . .\powershell\install.ps1
     #. .\nvim\install.ps1
 
-    #########
-    # scoop #
-    #########
-
-    $scoopIsInstalled = ($null -ne (Get-Command scoop -ErrorAction Ignore))
-    if ($scoopIsInstalled) {
-
-        # neovim provider
-        pip uninstall --yes pynvim
-        pip uninstall --yes wheel
-
-        # final scoop uninstall
-        scoop uninstall scoop
-    }
-
- 
     ########
     # nvim #
     ########
