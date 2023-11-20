@@ -31,6 +31,9 @@ scoop install flutter
 scoop install openjdk
 scoop install kotlin
 
+# firebase
+scoop install firebase
+
 # scoop updates
 scoop update
 scoop update *
