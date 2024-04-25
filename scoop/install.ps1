@@ -5,7 +5,7 @@
 $isScoopInstalled = ($null -ne (Get-Command scoop -ErrorAction Ignore))
 if (-not $isScoopInstalled) {
     # install scoop
-    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 }
 
 # 7zip and git (NEEDED FOR BUCKET MANAGEMENT)
