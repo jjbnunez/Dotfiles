@@ -3,20 +3,34 @@
 # =============================
 #
 # This is a dotfile installer script for development
-# tool configs that are convenient to my workflow on
-# Windows machines.
+# tools that are convenient to my workflow on Windows
+# machines.
 #
 # If you want to learn how to similarly build one for
 # yourself, let me know and I'll happily share resources.
 ##
 
 try {
-    . .\envvars\set.ps1
-    . .\scoop\install.ps1
+    
+    # First, check if winget is installed
+    if (-not ($null -ne (Get-Command winget -ErrorAction Ignore))) {
+	    # See https://learn.microsoft.com/en-us/windows/package-manager/winget/ for installation instructions
+	    # We do this in case you just logged into your profile for the first time on Windows 10 moments ago
+	    #Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+        Write-Warning "For some reason, WinGet is not installed. Please consult the following resource to install it:"
+        Write-Warning "    https://learn.microsoft.com/en-us/windows/package-manager/winget/"
+        throw "Please ensure WinGet is installed first and accessible by your shell before running this script."
+    }
+
+    . .\git\install.ps1
+    . .\7zip\install.ps1
+    # . .\nvim\install.ps1
+    . .\ohmyposh\install.ps1
     . .\powershell\install.ps1
+    . .\terminal\install.ps1
 
     Write-Host "Done!"
-    Write-Warning "Restart your Windows Terminal process for changes to take full effect!"
+    Write-Warning "Restart this shell for changes to take full effect!"
 }
 
 catch {
