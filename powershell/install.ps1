@@ -1,21 +1,3 @@
-##############
-# powershell #
-##############
-
-$isScoopInstalled = ($null -ne (Get-Command scoop -ErrorAction Ignore))
-$isOhMyPoshInstalled = ($null -ne (Get-Command oh-my-posh -ErrorAction Ignore))
-
-if (-not $isScoopInstalled) {
-    Write-Error "ABORT! scoop not found among commands. Is scoop installed?"
-}
-else {
-    if (-not $isOhMyPoshInstalled) {
-        scoop install oh-my-posh
-    }
-    else {
-        scoop update oh-my-posh
-    }
-}
 
 Write-Host "Updating PowerShell profile... " -NoNewLine
 
