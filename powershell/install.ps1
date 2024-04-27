@@ -1,20 +1,6 @@
-
-Write-Host "Updating PowerShell profile... " -NoNewLine
-
-$profileSource = "$env:DOTFILES\powershell\profile.ps1"
-$profileTarget51 = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
-$profileTargetVSCode51 = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.VSCode_profile.ps1"
-$profileTarget7 = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-$profileTargetVSCode7 = "$env:USERPROFILE\Documents\PowerShell\Microsoft.VSCode_profile.ps1"
-
-#The New-Item call below looks redundant but it forces subdirectory creation whereas Copy-Item doesn't
-New-Item -Force -ItemType File -Path "$profileTarget51" 
-New-Item -Force -ItemType File -Path "$profileTarget7" 
-New-Item -Force -ItemType File -Path "$profileTargetVSCode51" 
-New-Item -Force -ItemType File -Path "$profileTargetVSCode7" 
-Copy-Item -Path "$profileSource" -Destination "$profileTarget51" -Force
-Copy-Item -Path "$profileSource" -Destination "$profileTarget7" -Force
-Copy-Item -Path "$profileSource" -Destination "$profileTargetVSCode51" -Force
-Copy-Item -Path "$profileSource" -Destination "$profileTargetVSCode7" -Force
-
-Write-Host "OK"
+if ($PSVersionTable.PSVersion.Major -le 5) {
+    Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
+    Install-FromWinGet -Id "Microsoft.PowerShell"
+} else {
+    Write-Warning "You are currently using PowerShell Core. Use Windows PowerShell (version 5.1) to update PowerShell Core."
+}
