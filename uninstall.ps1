@@ -7,7 +7,7 @@
 ##
 
 try {
-    . .\envvars\uninstall.ps1
+    . .\envvars\unset.ps1
     . .\scoop\uninstall.ps1
     . .\powershell\uninstall.ps1
     #. .\nvim\uninstall.ps1
