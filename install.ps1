@@ -28,6 +28,7 @@ try {
     . .\ohmyposh\install.ps1
     . .\powershell\install.ps1
     . .\terminal\install.ps1
+    . .\python\install.ps1
 
     Write-Host "Done!"
     Write-Warning "Restart this shell for changes to take full effect!"

@@ -27,6 +27,7 @@ try {
     . .\ohmyposh\uninstall.ps1
     . .\powershell\uninstall.ps1
     . .\terminal\uninstall.ps1
+    . .\python\uninstall.ps1
 
     Write-Host "Done!"
     Write-Warning "Restart your Windows Terminal process for changes to take full effect!"
