@@ -22,13 +22,17 @@ try {
         throw "Please ensure WinGet is installed first and accessible by your shell before running this script."
     }
 
-    . .\git\install.ps1
-    . .\7zip\install.ps1
-    # . .\nvim\install.ps1
-    . .\ohmyposh\install.ps1
-    . .\powershell\install.ps1
-    . .\terminal\install.ps1
-    . .\python\install.ps1
+    $DotfilesDirectory = "$env:USERPROFILE\Dotfiles"
+
+    $Directories = Get-ChildItem -Path "$DotfilesDirectory" -Directory
+
+    $Directories | ForEach-Object {
+        $BaseName = $_.BaseName
+        $Path = "$DotfilesDirectory\$BaseName\install.ps1"
+        if (Test-Path $Path) {
+            . $Path
+        }
+    }
 
     Write-Host "Done!"
     Write-Warning "Restart this shell for changes to take full effect!"

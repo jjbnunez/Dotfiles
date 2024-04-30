@@ -21,13 +21,17 @@ try {
         throw "Please ensure WinGet is installed first and accessible by your shell before running this script."
     }
     
-    . .\git\uninstall.ps1
-    . .\7zip\uninstall.ps1
-    # . .\nvim\uninstall.ps1
-    . .\ohmyposh\uninstall.ps1
-    . .\powershell\uninstall.ps1
-    . .\terminal\uninstall.ps1
-    . .\python\uninstall.ps1
+    $DotfilesDirectory = "$env:USERPROFILE\Dotfiles"
+
+    $Directories = Get-ChildItem -Path "$DotfilesDirectory" -Directory
+
+    $Directories | ForEach-Object {
+        $BaseName = $_.BaseName
+        $Path = "$DotfilesDirectory\$BaseName\uninstall.ps1"
+        if (Test-Path $Path) {
+            . $Path
+        }
+    }
 
     Write-Host "Done!"
     Write-Warning "Restart your Windows Terminal process for changes to take full effect!"
