@@ -12,7 +12,7 @@
 
 try {
     . .\powershell\unset.ps1
-	. .\envvars\unset.ps1
+    . .\envvars\unset.ps1
 
     Write-Host "Done!"
     Write-Warning "Restart this shell for changes to take full effect!"
