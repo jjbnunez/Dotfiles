@@ -11,8 +11,17 @@
 ##
 
 try {
-    . .\powershell\unset.ps1
-    . .\envvars\unset.ps1
+    $DotfilesDirectory = "$env:USERPROFILE\Dotfiles"
+
+    $Directories = Get-ChildItem -Path "$DotfilesDirectory" -Directory
+
+    $Directories | ForEach-Object {
+        $BaseName = $_.BaseName
+        $Path = "$DotfilesDirectory\$BaseName\unset.ps1"
+        if (Test-Path $Path) {
+            . $Path
+        }
+    }
 
     Write-Host "Done!"
     Write-Warning "Restart this shell for changes to take full effect!"
