@@ -1,1 +1,1 @@
-oh-my-posh font install Meslo --user
+oh-my-posh font install meslo
