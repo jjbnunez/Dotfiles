@@ -6,7 +6,9 @@ $profileTargetVSCode51 = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft
 $profileTarget7 = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 $profileTargetVSCode7 = "$env:USERPROFILE\Documents\PowerShell\Microsoft.VSCode_profile.ps1"
 
-#The New-Item call below looks redundant but it forces subdirectory creation whereas Copy-Item doesn't
+# The New-Item call below looks redundant but it
+# forces subdirectory creation whereas Copy-Item
+# doesn't.
 New-Item -Force -ItemType File -Path "$profileTarget51" 
 New-Item -Force -ItemType File -Path "$profileTarget7" 
 New-Item -Force -ItemType File -Path "$profileTargetVSCode51" 
