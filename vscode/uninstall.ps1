@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Uninstall-FromWinGet -Id "Microsoft.VisualStudioCode"
+winget uninstall --source winget --exact --id 'Microsoft.VisualStudioCode'

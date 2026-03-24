@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Uninstall-FromWinGet -Id "JanDeDobbeleer.OhMyPosh"
+winget uninstall --source winget --exact --id 'JanDeDobbeleer.OhMyPosh'

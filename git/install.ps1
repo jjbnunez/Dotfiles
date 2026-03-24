@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Install-FromWinGet -Id "Git.Git"
+winget install --source winget --exact --id 'Git.Git'

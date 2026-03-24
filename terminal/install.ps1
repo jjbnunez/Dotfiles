@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Install-FromWinGet -Id "Microsoft.WindowsTerminal"
+winget install --source winget --exact --id 'Microsoft.WindowsTerminal'

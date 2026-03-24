@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Uninstall-FromWinGet -Id "Git.Git"
+winget uninstall --source winget --exact --id 'Git.Git'

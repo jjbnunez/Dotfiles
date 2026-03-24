@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Install-FromWinGet -Id "Microsoft.VisualStudioCode"
+winget install --source winget --exact --id 'Microsoft.VisualStudioCode'

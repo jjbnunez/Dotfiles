@@ -1,2 +1,1 @@
-Import-Module -Name $PSScriptRoot\..\shared\MyHelperModule
-Install-FromWinGet -Id "JanDeDobbeleer.OhMyPosh"
+winget install --source winget --exact --id 'JanDeDobbeleer.OhMyPosh'
