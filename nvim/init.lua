@@ -26,6 +26,9 @@ vim.o.relativenumber = true
 -- See `:h 'clipboard'`
 vim.api.nvim_create_autocmd('UIEnter', {
   callback = function()
+    if vim.env.SSH_CONNECTION then
+        vim.g.clipboard = 'osc52'
+    end
     vim.o.clipboard = 'unnamedplus'
   end,
 })
