@@ -57,10 +57,10 @@ vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-n><C-w>h')
 vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-n><C-w>j')
 vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-n><C-w>k')
 vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-n><C-w>l')
-vim.keymap.set({ 'n' }, '<A-h>', '<C-w>h')
-vim.keymap.set({ 'n' }, '<A-j>', '<C-w>j')
-vim.keymap.set({ 'n' }, '<A-k>', '<C-w>k')
-vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
+vim.keymap.set('n', '<A-h>', '<C-w>h')
+vim.keymap.set('n', '<A-j>', '<C-w>j')
+vim.keymap.set('n', '<A-k>', '<C-w>k')
+vim.keymap.set('n', '<A-l>', '<C-w>l')
 
 -- AUTOCOMMANDS (EVENT HANDLERS)
 --
@@ -123,7 +123,7 @@ vim.o.swapfile = false
 
 -- save undo-trees in files
 vim.o.undofile = true
-vim.o.undodir = '$HOME/.config/nvim/undo'
+vim.o.undodir = vim.fs.normalize('$HOME/.config/nvim/undo')
 
 -- number of undos saved
 vim.o.undolevels = 10000
@@ -137,14 +137,24 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
+-- remove arrow key usage
+vim.keymap.set({'n', 'i', 'v'}, '<Up>', '<Nop>')
+vim.keymap.set({'n', 'i', 'v'}, '<Down>', '<Nop>')
+vim.keymap.set({'n', 'i', 'v'}, '<Left>', '<Nop>')
+vim.keymap.set({'n', 'i', 'v'}, '<Right>', '<Nop>')
+
 -- prevent hidden modified buffers from preventing quits
 vim.o.hidden = true
 
 -- buffer next and buffer previous
-vim.keymap.set({ 'n' }, '<Leader>bn', ':bn<cr>')
+vim.keymap.set('n', '<Leader>bn', ':bn<CR>')
+vim.keymap.set('n', '<Leader>bp', ':bp<CR>')
+
+-- tabpage next and tabpage previous
+vim.keymap.set('n', '<Leader>tn', ':tabnext<CR>')
 
 -- special remap for standardizing split window keybind with tmux
-vim.keymap.set({ 'n' }, '<C-w>h', '<C-w>s')
+vim.keymap.set('n', '<C-w>h', '<C-w>s')
 
 -- special remap like vscode for fuzzy file search
 vim.keymap.set('n', '<Leader>p', ':FzfLua files<CR>')
