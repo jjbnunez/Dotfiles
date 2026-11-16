@@ -143,6 +143,15 @@ vim.keymap.set({'n', 'i', 'v'}, '<Down>', '<Nop>')
 vim.keymap.set({'n', 'i', 'v'}, '<Left>', '<Nop>')
 vim.keymap.set({'n', 'i', 'v'}, '<Right>', '<Nop>')
 
+-- open new terminal at bottom with set height
+vim.keymap.set('n', '<C-`>', ':sp<Bar>term<CR><C-W>J:resize10<CR>')
+
+-- edit config file
+vim.keymap.set('n', '<Leader>,', ':tabnew|e $MYVIMRC<CR>')
+
+-- restart editor
+vim.keymap.set('n', '<Leader>res',':restart<CR>')
+
 -- prevent hidden modified buffers from preventing quits
 vim.o.hidden = true
 
@@ -151,7 +160,8 @@ vim.keymap.set('n', '<Leader>bn', ':bn<CR>')
 vim.keymap.set('n', '<Leader>bp', ':bp<CR>')
 
 -- tabpage next and tabpage previous
-vim.keymap.set('n', '<Leader>tn', ':tabnext<CR>')
+vim.keymap.set('n', '<Leader>tn', ':tabn<CR>')
+vim.keymap.set('n', '<Leader>tp', ':tabp<CR>')
 
 -- special remap for standardizing split window keybind with tmux
 vim.keymap.set('n', '<C-w>h', '<C-w>s')
