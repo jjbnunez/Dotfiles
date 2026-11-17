@@ -163,9 +163,6 @@ vim.keymap.set('n', '<Leader>bp', ':bp<CR>')
 vim.keymap.set('n', '<Leader>tn', ':tabn<CR>')
 vim.keymap.set('n', '<Leader>tp', ':tabp<CR>')
 
--- special remap for standardizing split window keybind with tmux
-vim.keymap.set('n', '<C-w>h', '<C-w>s')
-
 -- special remap like vscode for fuzzy file search
 vim.keymap.set('n', '<Leader>p', ':FzfLua files<CR>')
 vim.keymap.set('n', '<Leader>P', ':FzfLua oldfiles<CR>')
